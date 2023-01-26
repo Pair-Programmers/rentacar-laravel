@@ -3,17 +3,37 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class AdminController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+    public function login(Request $request)
     {
-        //
+        $this->validate($request, [
+            'password' => 'required',
+            'email' => 'required'
+        ]);
+
+        $user = \App\Models\User::where('email', $request->email)->get()->first();
+
+        if($user){
+            if(Hash::check($request->password, $user->password)){
+                return redirect()->route('admin.dashboard');
+            } else {
+                return redirect()->back()->withErrors(['password'=>'Invalid credentials']);
+            }
+        } else {
+            return redirect()->back()->withErrors(['email'=>'User not found']);
+        }
+
+        // $user->name = $request->name;
+        // $user->role = $request->role;
+        // $user->email = $request->email;
+        // if($request->filled('password')){
+        //     $user->password = $request->password;
+        // }
+        // $user->save();
+        // return redirect()->back();
     }
 
     public function showDashboardPaage()

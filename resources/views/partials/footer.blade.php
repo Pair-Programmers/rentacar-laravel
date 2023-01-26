@@ -33,10 +33,10 @@
                 <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
                     <h5>Company</h5>
                     <ul class="footer-list">
-                        <li><a href="about.html">About us</a></li>
+                        <li><a href="{{route('about-us')}}">About us</a></li>
                         <li><a href="blog-masonry.html">News</a></li>
                         <li><a href="#">Emergency Contacts</a></li>
-                        <li><a href="contacts.html">Contact</a></li>
+                        <li><a href="{{route('contact-us')}}">Contact</a></li>
                     </ul>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">

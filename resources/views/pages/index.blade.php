@@ -207,7 +207,7 @@
                         <span class="text-link">Drive away with more money in your pockets and more time on your
                             itinerary.</span>
                         <a href="#" class="btn" data-remodal-target="modal">BOOK NOW</a>
-                        <a href="contacts.html" class="btn invert">EMAIL US</a>
+                        <a href="{{route('contact-us')}}" class="btn invert">EMAIL US</a>
                     </article>
                 </div>
             </div>

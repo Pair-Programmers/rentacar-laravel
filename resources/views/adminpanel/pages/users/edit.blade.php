@@ -35,21 +35,22 @@
                         </div>
                     </div>
                     <!-- /.card-header -->
-                    <form method="POST" action="{{ route('admin.user.store') }}" enctype="multipart/form-data">
+                    <form method="POST" action="{{ route('admin.user.update', $user->id) }}" enctype="multipart/form-data">
+                        @method('PUT')
                         @csrf
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="inputName">Name</label>
-                                        <input required type="name" name="name" class="form-control" id="inputName"
+                                        <input required type="name" name="name" value="{{$user->name}}" class="form-control" id="inputName"
                                             placeholder="Enter name">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="inputEmail">Email</label>
-                                        <input required type="email" name="email" class="form-control" id="inputEmail"
+                                        <input required type="email" name="email" value="{{$user->email}}" class="form-control" id="inputEmail"
                                             placeholder="Enter email">
                                     </div>
                                 </div>
@@ -58,7 +59,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="inputPassword">Password</label>
-                                        <input required type="password" name="password" class="form-control"
+                                        <input type="password" name="password" class="form-control"
                                             id="inputPassword" placeholder="Enter password">
                                     </div>
                                 </div>
@@ -66,9 +67,16 @@
                                     <div class="form-group">
                                         <label>Role</label>
                                         <select required class="form-control select2" style="width: 100%;" name="role">
+                                            @if ($user->role == 'Admin')
                                             <option disabled>Select</option>
-                                            <option value="Admin">Admin</option>
+                                            <option value="Admin" selected>Admin</option>
                                             <option value="User">User</option>
+                                            @else
+                                            <option disabled>Select</option>
+                                            <option value="Admin" >Admin</option>
+                                            <option value="User" selected>User</option>
+                                            @endif
+
                                         </select>
                                     </div>
                                 </div>
@@ -77,7 +85,7 @@
 
                         </div>
                         <div class="card-footer">
-                            <button type="submit" class="btn btn-primary">Add User</button>
+                            <button type="submit" class="btn btn-primary">Update User</button>
                         </div>
                     </form>
                 </div>

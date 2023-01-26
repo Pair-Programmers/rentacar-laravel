@@ -16,8 +16,8 @@
 
                 <!-- Left nav -->
                     <ul class="menu-navigation__list nav navbar-nav">
-                        <li><a href="index-2.html">Home</a></li>
-                        <li><a href="about.html">About us</a></li>
+                        <li><a href="{{route('index')}}">Home</a></li>
+                        <li><a href="{{route('about-us')}}">About us</a></li>
                         <li><a href="fleet.html">Fleet <i class="icon-arrow-down-sign-to-navigate"></i></a>
                             <ul class="sub-menu dropdown-menu">
                                 <li><a href="fleet-second.html">Fleet page 2</a></li>
@@ -61,15 +61,15 @@
                         <li><a href="rates.html">Rates</a></li>
                         <li><a href="ourdrivers.html">Our drivers</a></li>
                         <li><a href="tipstesti.html">Tips</a></li>
-                        <li class="current"><a href="blog.html">Blog <i class="icon-arrow-down-sign-to-navigate"></i></a>
+                        <li class="current"><a href="{{route('blogs')}}">Blog <i class="icon-arrow-down-sign-to-navigate"></i></a>
                             <ul class="sub-menu dropdown-menu">
-                                <li><a href="blog.html">Blog list</a></li>
+                                <li><a href="{{route('blogs')}}">Blog list</a></li>
                                 <li><a href="blog-masonry.html">Masonry layout</a></li>
                                 <li><a href="single-post.html">Single Post</a></li>
                                 <li><a href="typography.html">Typography</a></li>
                             </ul>
                         </li>
-                        <li><a href="contacts.html">Contacts</a></li>
+                        <li><a href="{{route('contact-us')}}">Contacts</a></li>
                     </ul>
 
                 </div><!--/.nav-collapse -->
@@ -88,7 +88,7 @@
     <div class="header-container_wrap container">
         <div class="header-container__flex">
             <div class="logo">
-                <a href="index-2.html">
+                <a href="{{route('index')}}">
                     <i class="icon-logo"></i>
                     <span>Rental</span>Cars
                 </a>
@@ -124,8 +124,8 @@
 
                 <!-- Left nav -->
                     <ul class="menu-navigation__list nav navbar-nav">
-                        <li><a href="index-2.html" data-hover="Home">Home</a></li>
-                        <li><a href="about.html" data-hover="About us">About us</a></li>
+                        <li><a href="{{route('index')}}" data-hover="Home">Home</a></li>
+                        <li><a href="{{route('about-us')}}" data-hover="About us">About us</a></li>
                         <li><a href="fleet.html" data-hover="Fleet">Fleet <i class="icon-arrow-down-sign-to-navigate"></i></a>
                             <ul class="sub-menu dropdown-menu">
                                 <li><a href="fleet-second.html">Fleet page 2</a></li>
@@ -169,15 +169,15 @@
                         <li><a href="rates.html" data-hover="Rates">Rates</a></li>
                         <li><a href="ourdrivers.html" data-hover="Our drivers">Our drivers</a></li>
                         <li><a href="tipstesti.html" data-hover="Testimonials">Tips</a></li>
-                        <li class="current"><a href="blog.html" data-hover="Blog">Blog <i class="icon-arrow-down-sign-to-navigate"></i></a>
+                        <li class="current"><a href="{{route('blogs')}}" data-hover="Blog">Blog <i class="icon-arrow-down-sign-to-navigate"></i></a>
                             <ul class="sub-menu dropdown-menu">
-                                <li><a href="blog.html">Blog list</a></li>
+                                <li><a href="{{route('blogs')}}">Blog list</a></li>
                                 <li><a href="blog-masonry.html">Masonry layout</a></li>
                                 <li><a href="single-post.html">Single Post</a></li>
                                 <li><a href="typography.html">Typography</a></li>
                             </ul>
                         </li>
-                        <li><a href="contacts.html" data-hover="Contacts">Contacts</a></li>
+                        <li><a href="{{route('contact-us')}}" data-hover="Contacts">Contacts</a></li>
                     </ul>
 
                 </div><!--/.nav-collapse -->
